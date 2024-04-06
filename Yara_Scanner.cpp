@@ -89,7 +89,6 @@ public:
             yr_initialize();
         }
 
-        // Load compiled YARA rules
          static YR_RULES* load_yara_rules() {
             YR_RULES* rules = nullptr;
             int result = yr_rules_load(compiled_rules_path, &rules);
@@ -143,7 +142,6 @@ public:
 
     std::vector<std::string> file_list = CommonFunctions::list_directory_files(dir_path);
     for (const auto& file : file_list) {
-        // Perform YARA scan for each file in the directory
         std::vector<std::map<std::string, std::string>> matches = scan_file(file);
         match_list.insert(match_list.end(), matches.begin(), matches.end());
     }

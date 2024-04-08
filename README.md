@@ -5,8 +5,8 @@ YaraScanner is a C++ application for scanning files and access logs using YARA r
 ## Prerequisites
 
 - C++ compiler with C++11 support
-- YARA library installed
 
+### use the customized path of your directory and file
 
 ## Installation
 
